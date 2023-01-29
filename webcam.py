@@ -27,8 +27,10 @@ while True:
     cv2.imshow('img', img)
 
     # Stop if escape key is pressed
-    k = cv2.waitKey(30) & 0xff
-    if k == 27:
+    key = cv2.waitKey(30) & 0xff
+
+    # if the `q` key was pressed, break from the loop
+    if key == ord("q"):
         break
 
 # Release the VideoCapture object
